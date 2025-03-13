@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+            <div class="container">
+
+                <div class="row mt-50">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-center heading-separator" style="color:white">WARNING!</h2>
+                        <form method="POST" action="{{ url_for('.zerolab')}}">
+                            <div class="row">
+                                <br><br><br><h2 style="color:white">You are about to reset the entire lab...are you sure?</h2>
+                                <h1 style="color:white">Proceed with caution!!</h1>
+                                <h3 style="color:red">Dange Will Robinson!!!</h3>
+
+                            </div>
+                            <div>
+                            <div class="text-center mt-20">
+                                <button class="btn btn-red">RESET WHOLE LAB</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.form -->
+
+{% endblock %}

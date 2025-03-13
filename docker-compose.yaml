@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  web2:
+    build: .
+    ports:
+    - "5003:5000"
+    volumes:
+    - .:/opt
+    links:
+    - mongo2
+    cap_add:
+    - NET_ADMIN
+  mongo2:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: siesta3
+    volumes:
+      - mongo-data:/data2/db
+      - mongo-configdb:/data2/configdb
+
+
+volumes:
+  mongo-data:
+    driver: local
+  mongo-configdb:

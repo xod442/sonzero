@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <div class="container">
+
+            <div class="row mt-50">
+                <div class="col-md-8 col-md-offset-2"><br><br><br>
+                    <h2 class="text-center heading-separator" style="color:white" >Select Lab Group to Level Up</h2>
+                    <form method="POST" action="{{ url_for('.lab201_lab_group')}}">
+                      <div class="col-sm-12">
+                        <label for="message" style="color:white">System Message:</label>
+                        <input type="text" readonly class="form-control" id="message" name="message" value="{{message}}">
+                          <hr>
+                          <select class="selectpicker" name="group">
+                                  <option value="LG01">LG01</option>
+                                  <option value="LG02">LG02</option>
+                                  <option value="LG03">LG03</option>
+                                  <option value="LG04">LG04</option>
+                                  <option value="LG05">LG05</option>
+                                  <option value="LG06">LG06</option>
+                                  <option value="LG07">LG07</option>
+                                  <option value="LG08">LG08</option>
+                                  <option value="LG09">LG09</option>
+                                  <option value="LG10">LG010</option>
+                          </select>
+                      </div>
+                      <br>
+                        <div class="text-center mt-20">
+                            <button class="btn btn-blue">Select Lab Group</button>
+                        </div>
+                    </form>
+                </div>
+            </div><
+
+
+
+
+  {% endblock %}
+
+  {% block scripts %}
+  <script>
+    $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        dom: 'Bfrtip',
+        select: true
+    } );
+} );
+
+  </script>
+  {% endblock %}

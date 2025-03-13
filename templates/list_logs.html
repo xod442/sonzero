@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <div class="container">
+
+            <div class="row mt-50">
+                <div class="col-md-8 col-md-offset-2"><br><br><br>
+                    <h2 class="text-center heading-separator" style="color:white" >List of Log Entries</h2>
+                    <form method="POST" action="{{ url_for('home', message = 'Returned to home screen...EOL') }}">
+                      <div class="data-tables datatable-dark">
+                            <table id="example" class="styled-table">
+                                  <thead class="text-capitalize">
+                                      <tr>
+                                          <th>Log Entry</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                          {% for log in logs %}
+                                          <tr>
+                                              <td>{{log}}</td>
+                                          </tr>
+                                          {% endfor %}
+                                      </tbody>
+                              </table>
+                    </div>
+
+
+                    <div>
+
+                              {{ message }}
+                        </div>
+                        <div class="text-center mt-20">
+                            <button class="btn btn-green">HOME</button>
+                        </div>
+                    </form>
+                </div>
+            </div><
+
+
+
+
+  {% endblock %}
+
+  {% block scripts %}
+  <script>
+    $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        dom: 'Bfrtip',
+        select: true
+    } );
+} );
+
+  </script>
+  {% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+
+        <div class="container">
+            <div class="row mt-50">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="text-center heading-separator" style="color:white">Enter Credentials</h2>
+                    <form method="POST" action="{{ url_for('.creds_reset_only')}}">
+                        <div class="row"><br><br><br><br>
+                          <div>
+                            <p style="color:red">  {{ message }}  </p>
+                          </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="vuser" style="color:white">vSphere User:</label>
+                                  <input type="text" required placeholder="administrator@vsphere.local" class="form-control" id="vuser" name="vuser">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="vsphere_password" style="color:white">vSphere Password:</label>
+                                  <input type="password" required placeholder="vSphere_password" class="form-control" id="vsphere_password" name="vsphere_password">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="switch_user" style="color:white">Switch User:</label>
+                                  <input type="text" required placeholder="admin" class="form-control" id="switch_user" name="switch_user">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="switch_password" style="color:white">Switch Password:</label>
+                                  <input type="password" required placeholder="switch_password" class="form-control" id="switch_password" name="switch_password">
+                                </div>
+                            </div>
+                            <!--For templates un-comment
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="wired_template" style="color:white">Wired Template:</label>
+                                  <input type="text" placeholder="Optional" class="form-control" id="wired_template" name="wired_template">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="wireless_template" style="color:white">Wireless Template:</label>
+                                  <input type="text" placeholder="Optional" class="form-control" id="wireless_template" name="wireless_template">
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="text-center mt-20">
+                            <button class="btn btn-green">Save Credentials</button>
+                        </div>
+                    </form>
+                </div>
+            </div><
+
+
+
+
+  {% endblock %}

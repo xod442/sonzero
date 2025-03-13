@@ -1,0 +1,10 @@
+flask
+pytest
+PyMongo
+pyVmomi
+ipaddress
+pyaoscx
+urllib3
+datetime
+redfish
+pyafc @ git+https://github.com/xod442/pyafc

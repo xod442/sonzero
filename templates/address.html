@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+
+        <div class="container">
+            <div class="row mt-50">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="form-group">
+                    <label for="message" style="color:white">System Message:</label>
+                    <input type="text" readonly class="form-control" id="message" name="message" value="{{message}}">
+                  </div>
+                    <h2 class="text-center heading-separator" style="color:white">Enter IP address</h2>
+                    <form method="POST" action="{{ url_for('.add_address')}}">
+                        <div class="row"><br><br><br><br>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="vip" style="color:white">vSphere IP:</label>
+                                  <input type="text" required placeholder="10.250.222.245" class="form-control" id="vip" name="vip">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="text-center mt-20">
+                            <button class="btn btn-green">Save Address</button>
+                        </div>
+                    </form>
+                </div>
+            </div><
+
+
+
+
+  {% endblock %}

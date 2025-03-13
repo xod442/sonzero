@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+
+        <div class="container">
+            <div class="row mt-50">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="text-center heading-separator" style="color:white">Enter Jumpsever Credentials</h2>
+                    <form method="POST" action="{{ url_for('.add_jump')}}">
+                        <div class="row"><br><br><br><br>
+                          <div>
+                            <p style="color:red">  {{ message }}  </p>
+                          </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="j_user" style="color:white">Jumpsever User:</label>
+                                  <input type="text" required placeholder="administrator@vsphere.local" class="form-control" id="j_user" name="j_user">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="j_password" style="color:white">Jumpserver Password:</label>
+                                  <input type="password" required placeholder="password" class="form-control" id="j_password" name="j_password">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="jump_ip" style="color:white">Jumpserver IP:</label>
+                                  <input type="text" required placeholder="10.10.1.1" class="form-control" id="jump_ip" name="jump_ip">
+                                </div>
+                            </div>
+                
+                            <!--For templates un-comment
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="wired_template" style="color:white">Wired Template:</label>
+                                  <input type="text" placeholder="Optional" class="form-control" id="wired_template" name="wired_template">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="wireless_template" style="color:white">Wireless Template:</label>
+                                  <input type="text" placeholder="Optional" class="form-control" id="wireless_template" name="wireless_template">
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="text-center mt-20">
+                            <button class="btn btn-green">Save Credentials</button>
+                        </div>
+                    </form>
+                </div>
+            </div><
+
+
+
+
+  {% endblock %}

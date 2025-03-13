@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+
+{% block content %}
+
+        <div class="col-lg-8">
+                <!-- seo fact area start -->
+                <div class="card">
+                      <div class="card-body"
+                        <div class="row mt-50">
+                          <div class="col-md-8 col-md-offset-2">
+                              <h2 class="text-center heading-separator" style="color:white">AFC Micro Lab Level Selector</h2>
+                              <form method="POST">
+                                <div class="col-sm-12"><br><br><br><br><br><br><br><br><br><br><br><br>
+                                  <label for="message" style="color:white">System Message:</label>
+                                  <input type="text" readonly class="form-control" id="message" name="message" value="{{message}}">
+
+                              </form>
+                          </div>
+                         </div>
+
+                      </div>
+                </div>
+
+      </div>
+
+      <script type="text/javascript">
+        $(document).ready(function());
+      </script>
+
+
+  {% endblock %}
